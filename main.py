@@ -33,6 +33,7 @@ while len(guessed_states) < 50:
     t.hideturtle()
     t.penup()
 
+    #user can exit early
     if state_guess == "Exit":
         missing_states = []
         for state in state_list:
@@ -50,6 +51,7 @@ while len(guessed_states) < 50:
         t.goto(state_data.x.item(), state_data.y.item())
         t.write(state_guess)
 
+    #if user guesses all 50 states, they win
     if len(guessed_states) == 50:
         t.goto(0, 0)
         t.write("YOU WIN!", False, "center", ("Arial", 18, "bold"))
